@@ -1,0 +1,477 @@
+:root {
+    --fuenteHeading:'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+
+    --primarios: #3d71f5;
+    --primarios2: #6ea2f5;
+    --gris: #e1e1e1;
+    --blanco: #ffffff ;
+    --negro: #000000;
+    --secundario: #d50d85 ;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /*siempre usar esto para 1 rem=10px*/
+}
+*,*:before , *:after {
+    box-sizing: inherit;
+}
+body{
+    font-family: var(--fuenteParrafos);
+    background-color: var(--primarios);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+header {
+    background-color: var(--blanco);
+    padding: 1rem;
+    
+}
+/** Globales**/
+
+.contenedor{
+    max-width: 180rem;
+    width: 90%;
+    margin: 1rem 8rem;
+}
+a{
+    text-decoration: none;
+}
+p{
+    font-family: var(--fuenteParrafos);
+}
+h1,h2,h3,h4,h5{
+    font-family: var(--fuenteHeading);
+    line-height: 1.2;
+}
+h1{
+    font-size: 5.2rem;
+}
+h2{
+    font-size: 4.3rem;
+}
+h3{
+    font-size: 3.6rem;
+}
+h4{
+    font-size: 3rem;
+}
+h5 {
+    font-size: 2.5rem;
+}
+img{
+    max-width: 100%;
+}
+.boton{
+    font-family: var(--fuenteHeading);
+    color: var(--negro);
+    background-color: var(--secundario);
+    text-align: center;
+    padding: 2rem 6rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 3rem;
+}
+a:visited {
+    color: var(--negro); /* Mantiene el mismo color después de ser visitado */
+}
+/** Utilidades **/
+
+.no-margin{
+    margin: 0;
+}
+.no-padding{
+    padding: 0;
+}
+.centrar-texto{
+    text-align: center;
+}
+.titulo{
+    background-color: var(--blanco);
+    border-radius: 10rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+
+}
+@media (max-width: 768px){
+    .titulo{
+        font-size: 3.8rem;
+    }
+}
+/** Header **/
+.header{
+    background-image: url(/img/Presentación\ Proyecto\ Creativo\ Colorido\ Azul.jpg);
+    height: 55rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.header img{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.barra{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navegacion{
+    color: var(--negro);
+    display: flex;
+    gap: 10rem;
+    align-items: center;
+}
+.navegacion a:hover{
+    border-bottom: 0.5rem solid var(--secundario);
+}
+.banner h1{
+
+    margin-top: 0;
+    font-size: 5.2rem;
+}
+.banner h5{
+    margin-top: 0;
+    font-size: 2.5rem;
+}
+@media (max-width: 768px){
+    .barra, .navegacion{
+        display: none;
+    }
+    .banner h1 {
+        font-size: 4rem; /* Ajusta el tamaño del título en pantallas pequeñas */
+    }
+    .banner h5 {
+        font-size: 2rem; /* Ajusta el tamaño del subtítulo en pantallas pequeñas */
+    }
+
+}
+/** Main **/
+/** Article 1 Mater Consultora Educativa**/
+.pregunta {
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+}
+.pregunta__1{
+    border: 3px solid var(--blanco);
+    background-color: var(--primarios2);
+    border-radius: 4rem;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    margin-bottom: 2rem; 
+}
+.pregunta__2{
+    border: 3px solid var(--blanco);
+    background-color: var(--primarios2);
+    border-radius: 4rem;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    margin-bottom: 2rem;
+}
+.pregunta__3{
+    border: 3px solid var(--blanco);
+    background-color: var(--primarios2);
+    border-radius: 4rem;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    margin-bottom: 2rem;
+}
+.pregunta__4{
+    border: 3px solid var(--blanco);
+    background-color: var(--primarios2);
+    border-radius: 4rem;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    margin-bottom: 2rem;
+}
+.pregunta__5{
+    border: 3px solid var(--blanco);
+    background-color: var(--primarios2);
+    border-radius: 4rem;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    margin-bottom: 2rem;
+}
+.pregunta__6{
+    border: 3px solid var(--blanco);
+    background-color: var(--primarios2);
+    border-radius: 4rem;
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    margin-bottom: 2rem;
+}
+@media (max-width: 768px){
+    .pregunta{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+}
+/** Article Capacitaciones 2 **/
+.panel{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+
+}
+.panel__recuadro {
+    padding: 0rem;
+    background-color: var(--primarios2);
+    border-radius: 3rem;
+    width: 410rem;         /* Ancho de los recuadros */
+    height: 50rem;        /* Alto igual para ambos */
+    position: relative;   /* Necesario para posicionar la imagen */
+    display: flex; /* Flex para centrar contenido */
+    flex-direction: column;
+    align-items: center;
+}
+.panel__recuadro h2{
+    margin: 3rem;
+}
+.panel__recuadro p{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+.panel__recuadro img{
+    position: absolute;
+    width: 15rem;
+    height: 15rem;
+    bottom: 1rem;
+    left: 1rem;
+}
+.panel__recuadro .boton{
+    width: auto;
+    position: absolute; /* Posiciona el botón */
+    right: 1rem; 
+    bottom: 0rem;
+}
+.panel__recuadro--dentro{
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    
+}
+
+@media (max-width: 768px) {
+    .contenedor{
+        margin: 2rem;
+    }
+    .boton{
+        padding: 1rem;
+    }
+    .panel{
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+    .panel__recuadro{
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+    }
+    .panel__recuadro h2{
+        margin: 0rem;
+    }
+    .panel__recuadro p{
+        font-size: 2.2rem;
+        margin: 0rem;
+    }
+    .panel__recuadro img{
+        display: none;
+    }
+    .panel__recuadro .boton{
+        width: 100%;
+        position: static; /* Cambiar a posición estática en móviles */
+        margin-top: 1rem; /* Espacio superior para el botón */
+        align-items: center;
+    }
+    .panel__recuadro--dentro{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0rem;
+        padding: 0rem;
+    }
+}
+/** Article pregunta 3 **/
+.article2{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    color: var(--negro);
+    border: 0.5rem groove var(--blanco);
+    border-radius: 3rem;
+}
+.article2__recuadro{
+    display: flex;
+    gap: 6rem;
+    margin: 6rem;
+}
+.article2__recuadro img{
+    width: 40rem;
+    height: 40rem;
+    border-radius: 20rem;
+}
+.logo-icono{
+    position: absolute;
+    right: 4rem;
+    bottom: 4rem;
+    width: 8rem;
+    height: auto;
+    border-radius: 10rem;
+}
+@media (max-width: 768px){
+    .article2{
+        margin-top: 2rem;
+    }
+    .article2__recuadro{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+        gap: 1rem;
+        margin: 2rem;
+    }
+    .logo-icono{
+        right: 1.5rem;
+        bottom: 1.5rem;
+    }
+    .article2__recuadro h1{
+        font-size: 3rem;
+    }
+    .article2__recuadro img{
+        width: 20rem;
+        height: 20rem;
+    }
+
+}
+/** Article 4 Quienes somos? **/
+.article3{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+.article3__contacto{
+    display: flex;
+    gap: 5rem;
+    
+}
+.article3__texto{
+    padding-left: 4rem;
+    background-color: var(--primarios2);
+    border-radius: 3rem;
+    border: 3px solid var(--blanco);
+}
+.article3__contacto img{
+    border-radius: 25rem;
+    width: 30rem;
+    height: 30rem;
+    border: 3px solid var(--blanco);
+}
+@media (max-width: 768px){
+    .article3__contacto{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .article3__contacto h3{
+        margin: 1rem;
+
+    }
+    .article3__texto{
+        margin: 1rem;
+        padding-left: 1rem;
+        
+    }
+}
+/** Contactos **/
+.error {
+    background-color: red;
+    color: var(--blanco);
+    text-align: center;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+.enviado{
+    background-color: green;
+    color: var(--blanco);
+    text-align: center;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+.formulario {
+    background-color: var(--primarios2);
+    margin: 1rem 0 0 5rem;
+    width: 90%;
+    padding: 4rem;
+}
+.contacto{
+    height: 50rem; 
+}
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+}
+.campo__label{
+    flex: 0 0 9rem;
+    text-align: right;  
+    padding-right: 2rem;  
+}
+.campo__field{
+    flex: 1;
+    border: 1px solid var(--gris);
+}
+.campo__field--textarea{
+    height: 20rem;
+}
+
+
+
+
+/** Footer **/
+.footer{
+    margin-top: 10rem;
+    background-color: var(--primarios2);
+}
+.pie{
+    display: flex;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    justify-content:space-between ;
+    gap: 10rem;
+
+}
+.pie__parte1{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    align-items: center;
+    
+}
+.pie__parte1--mail{
+    display: flex;
+    gap: 3rem;
+}
+.pie__parte1--mail h4{
+    display: flex;
+    align-items: center;
+}
+.pie__parte2{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    align-items: center;
+}
+.pie__parte2--numeros{
+    display: flex;
+    gap: 3rem;
+}
